@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Commande>
+@{
+    ViewData["Title"] = "Clients";
+}
+
+<h1>Liste des Clients</h1>
+<a asp-controller="Client" asp-action="Create" class="text-blue-500 hover:underline mr-2">
+    <button class="bg-blue-800 text-white px-4 py-2 rounded-md mr-2 hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
+        Ajouter un client
+    </button>
+</a>
+<div class="max-w-2xl mx-auto p-8">
+    <table class="min-w-full bg-white border border-gray-300 shadow-md rounded-lg overflow-hidden">
+        <thead class="bg-gray-200">
+            <tr>
+
+                <th class="py-2 px-4 border-b">Nom</th>
+
+                <th class="py-2 px-4 border-b">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var obj in Model)
+            {
+                <tr>
+                    <td class="py-2 px-4 border-b">@obj.nomcomplet</td>
+                    <td class="py-2 px-4 border-b">
+
+                        <a asp-controller="Client" asp-action="Edit" asp-route-id="@obj.IdClient" class="text-blue-500 hover:underline mr-2">
+                            <button class="bg-yellow-500 text-white px-4 py-2 rounded-md mr-2 hover:bg-yellow-600 focus:outline-none focus:ring focus:border-yellow-300">
+                                Modifier
+                            </button>
+                        </a>
+                        <a asp-controller="Client" asp-action="Delete" class="text-blue-500 hover:underline mr-2">
+                            <button class="bg-red-500 text-white px-4 py-2 rounded-md mr-2 hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
+                                Delete
+                            </button>
+                        </a>
+
+                    </td>
+                </tr>
+
+            }
+
+        </tbody>
+    </table>
+</div>
+
