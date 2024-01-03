@@ -30,8 +30,8 @@
                                     Modifier
                                 </button>
                             </a>
-                            <a asp-controller="Client" asp-action="Delete" class="text-blue-500 hover:underline mr-2">
-                                <button class="bg-red-500 text-white px-4 py-2 rounded-md mr-2 hover:bg-red-600 focus:outline-none focus:ring focus:border-red-300">
+                            <a asp-controller="Client" asp-action="Delete" asp-route-id="@obj.IdClient" class="text-blue-500 hover:underline mr-2">
+                                <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded-md mr-2 hover:bg-red-600 focus:outline-none focus:ring focus:border-red-300">
                                     Delete
                                 </button>
                             </a>

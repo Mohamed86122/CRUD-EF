@@ -72,7 +72,7 @@ namespace WebApplication67.Controllers
             return View(client);
         }
 
-        public IActionResult Delete(int? id)
+        public IActionResult Delete(int id)
         {
             if (id == null)
             {
@@ -105,5 +105,6 @@ namespace WebApplication67.Controllers
 
             return RedirectToAction("Index");
         }
+
     }
 }
