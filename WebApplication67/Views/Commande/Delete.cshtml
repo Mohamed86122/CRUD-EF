@@ -1,0 +1,45 @@
+﻿@model WebApplication67.Models.Commande
+
+<div class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md mt-8">
+    <h1 class="text-2xl font-semibold mb-6">Supprimer une commande</h1>
+
+    <div>
+        <h4>Commande</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Client.NomComplet)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Client.NomComplet)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Libelle)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Libelle)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Prix)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Prix)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Quantite)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Quantite)
+            </dd>
+        </dl>
+
+        <form method="post" asp-action="Delete">
+            <input type="hidden" asp-for="IdCommande" />
+            <div class="form-group">
+                <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:border-red-300">
+                    Supprimer
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

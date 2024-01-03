@@ -1,1 +1,42 @@
-﻿
+﻿@model WebApplication67.Models.Commande
+
+<div class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md mt-8">
+    <h1 class="text-2xl font-semibold mb-6">Ajouter une commande</h1>
+
+
+    <form method="post" asp-action="Create" class="space-y-4">
+        <!-- Libelle -->
+        <div class="form-group">
+            <label asp-for="Libelle" class="block text-sm font-medium text-gray-600">Libelle</label>
+            <input asp-for="Libelle" class="form-control" />
+            <span asp-validation-for="Libelle" class="text-danger"></span>
+        </div>
+
+        <!-- Prix -->
+        <div class="form-group">
+            <label asp-for="Prix" class="block text-sm font-medium text-gray-600">Prix</label>
+            <input asp-for="Prix" class="form-control" />
+            <span asp-validation-for="Prix" class="text-danger"></span>
+        </div>
+
+        <!-- Quantite -->
+        <div class="form-group">
+            <label asp-for="Quantite" class="block text-sm font-medium text-gray-600">Quantite</label>
+            <input asp-for="Quantite" class="form-control" />
+            <span asp-validation-for="Quantite" class="text-danger"></span>
+        </div>
+
+        <!-- Client -->
+        <div class="form-group">
+            <label asp-for="ClientId" class="block text-sm font-medium text-gray-600">Client</label>
+            <select asp-for="ClientId" class="form-control" asp-items="ViewBag.Clients"></select>
+            <span asp-validation-for="ClientId" class="text-danger"></span>
+        </div>
+
+        <!-- Bouton Ajouter -->
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
+            Ajouter
+        </button>
+
+    </form>
+</div>

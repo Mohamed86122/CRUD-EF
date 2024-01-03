@@ -11,7 +11,7 @@ namespace WebApplication67.Data
         }
         public AppDbContext() { }
 
-        public DbSet<Client> Clients { get; set; }
+        public DbSet<Client> Clients { get; set; } 
         public DbSet<Commande> Commandes { get; set; }
 
     }

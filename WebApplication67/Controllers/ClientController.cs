@@ -43,7 +43,7 @@ namespace WebApplication67.Controllers
 
         public IActionResult Edit(int? id)
         {
-            if (id == null)
+            if (id <= 0)
             {
                 return NotFound();
             }
@@ -74,7 +74,7 @@ namespace WebApplication67.Controllers
 
         public IActionResult Delete(int id)
         {
-            if (id == null)
+            if (id <= 0)
             {
                 return NotFound();
             }
@@ -91,7 +91,7 @@ namespace WebApplication67.Controllers
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int id)
+        public IActionResult DeleteConfirmed(int? id)
         {
             Client client = _context.Clients.Find(id);
 

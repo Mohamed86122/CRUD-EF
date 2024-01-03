@@ -1,38 +1,46 @@
 ﻿@model IEnumerable<WebApplication67.Models.Commande>
-@{
-    ViewData["Title"] = "Clients";
-}
 
-<h1>Liste des Clients</h1>
-<a asp-controller="Client" asp-action="Create" class="text-blue-500 hover:underline mr-2">
-    <button class="bg-blue-800 text-white px-4 py-2 rounded-md mr-2 hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
-        Ajouter un client
-    </button>
-</a>
-<div class="max-w-2xl mx-auto p-8">
-    <table class="min-w-full bg-white border border-gray-300 shadow-md rounded-lg overflow-hidden">
-        <thead class="bg-gray-200">
+<div class="max-w-md mx-auto bg-white p-6 rounded-md shadow-md mt-8">
+    <h1 class="text-2xl font-semibold mb-6">Liste des Commandes</h1>
+
+    <table class="table">
+        <thead>
             <tr>
-                <th class="py-2 px-4 border-b">Nom</th>
-                <th class="py-2 px-4 border-b">Actions</th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Client.NomComplet)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Libelle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Prix)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Quantite)
+                </th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var obj in Model)
+            @foreach (var item in Model)
             {
                 <tr>
-                    <td class="py-2 px-4 border-b">@obj.Client.NomComplet</td>
-                    <td class="py-2 px-4 border-b">
-                        <a asp-controller="Client" asp-action="Edit" asp-route-id="@obj.Client.IdClient" class="text-blue-500 hover:underline mr-2">
-                            <button class="bg-yellow-500 text-white px-4 py-2 rounded-md mr-2 hover:bg-yellow-600 focus:outline-none focus:ring focus:border-yellow-300">
-                                Modifier
-                            </button>
-                        </a>
-                        <a asp-controller="Client" asp-action="Delete" class="text-white hover:underline mr-2">
-                            <button class="bg-red-500 text-white px-4 py-2 rounded-md mr-2 hover:bg-red-600 focus:outline-none focus:ring focus:border-red-300">
-                                Delete
-                            </button>
-                        </a>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Client.NomComplet)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Libelle)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Prix)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantite)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.IdCommande">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.IdCommande">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.IdCommande">Delete</a>
                     </td>
                 </tr>
             }
