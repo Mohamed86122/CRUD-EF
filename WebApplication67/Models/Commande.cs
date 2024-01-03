@@ -7,17 +7,18 @@ namespace WebApplication67.Models
         [Key]
         public int IdCommande { get; set; }
 
-        public string libelle { get; set; }
+        [Required]
+        public string? Libelle { get; set; }
 
+        [Required]
+        public int Prix { get; set; }
 
-        public int prix { get; set; }
+        [Required]
+        public int Quantite { get; set; }
 
-        public int quantité { get; set; }
-
-
+        [Required]
         public int ClientId { get; set; }
-        public Client Client { get; set; }
 
-
+        public Client Client { get; set; } 
     }
 }

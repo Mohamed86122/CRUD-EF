@@ -10683,24 +10683,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lenovo\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Minfo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\Documents\\Pratique ASP\\WebApplication67\\WebApplication67\\WebApplication67.csproj",
+      "projectUniqueName": "C:\\Users\\Minfo\\OneDrive\\Bureau\\ECOM\\CRUD-EF\\WebApplication67\\WebApplication67.csproj",
       "projectName": "WebApplication67",
-      "projectPath": "C:\\Users\\Lenovo\\Documents\\Pratique ASP\\WebApplication67\\WebApplication67\\WebApplication67.csproj",
-      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\Documents\\Pratique ASP\\WebApplication67\\WebApplication67\\obj\\",
+      "projectPath": "C:\\Users\\Minfo\\OneDrive\\Bureau\\ECOM\\CRUD-EF\\WebApplication67\\WebApplication67.csproj",
+      "packagesPath": "C:\\Users\\Minfo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Minfo\\OneDrive\\Bureau\\ECOM\\CRUD-EF\\WebApplication67\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Minfo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10708,7 +10703,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -10771,7 +10765,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

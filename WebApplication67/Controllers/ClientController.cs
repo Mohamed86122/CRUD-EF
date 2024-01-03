@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using NuGet.DependencyResolver;
 using WebApplication67.Data;
 using WebApplication67.Models;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace WebApplication67.Controllers
 {
@@ -14,26 +15,32 @@ namespace WebApplication67.Controllers
         {
             _context = context;
         }
+
         public IActionResult Index()
         {
-            IEnumerable<Client> obj = _context.Clients;
-           
-            return View(obj);
+            IEnumerable<Client> clients = _context.Clients.ToList();
+            return View(clients);
         }
+
         public IActionResult Create()
         {
-           
-            return View(new Client());
+            return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create(Client client)
         {
-            
+            if (ModelState.IsValid)
+            {
                 _context.Clients.Add(client);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
+            }
+
+            return View(client);
         }
+
         public IActionResult Edit(int? id)
         {
             if (id == null)
@@ -41,7 +48,7 @@ namespace WebApplication67.Controllers
                 return NotFound();
             }
 
-            Client client = _context.Clients.SingleOrDefault(x => x.IdClient == id);
+            Client client = _context.Clients.Find(id);
 
             if (client == null)
             {
@@ -51,47 +58,52 @@ namespace WebApplication67.Controllers
             return View(client);
         }
 
-        [HttpPost, ActionName("Edit")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(Client client)
         {
-            
-                Client cl = _context.Clients.SingleOrDefault(x => x.IdClient == client.IdClient);
-
-                if (cl != null)
-                {
-                   
-                    _context.Update(cl);
-                    _context.SaveChanges();
-
-                    return RedirectToAction("Index");
-                }
-            
+            if (ModelState.IsValid)
+            {
+                _context.Attach(client).State = EntityState.Modified;
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
 
             return View(client);
         }
+
         public IActionResult Delete(int? id)
         {
-          
+            if (id == null)
+            {
+                return NotFound();
+            }
+
             Client client = _context.Clients.Find(id);
-            
+
+            if (client == null)
+            {
+                return NotFound();
+            }
+
             return View(client);
         }
-        [HttpPost]
+
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public IActionResult Delete(int id,Client client)
+        public IActionResult DeleteConfirmed(int id)
         {
-            var cl =
-              _context.Clients.Where(x => x.IdClient == id).SingleOrDefault();
-            if (cl != null)
+            Client client = _context.Clients.Find(id);
+
+            if (client == null)
             {
-                _context.Clients.Remove(cl);
-                _context.SaveChanges();
+                return NotFound();
             }
+
+            _context.Clients.Remove(client);
+            _context.SaveChanges();
+
             return RedirectToAction("Index");
-
         }
-       
-
     }
 }

@@ -244,3 +244,15 @@ C:\Users\Lenovo\Documents\Pratique ASP\WebApplication67\WebApplication67\obj\Deb
 C:\Users\Lenovo\Documents\Pratique ASP\WebApplication67\WebApplication67\obj\Debug\net6.0\WebApplication67.pdb
 C:\Users\Lenovo\Documents\Pratique ASP\WebApplication67\WebApplication67\obj\Debug\net6.0\WebApplication67.genruntimeconfig.cache
 C:\Users\Lenovo\Documents\Pratique ASP\WebApplication67\WebApplication67\obj\Debug\net6.0\ref\WebApplication67.dll
+C:\Users\Minfo\OneDrive\Bureau\ECOM\CRUD-EF\WebApplication67\obj\Debug\net6.0\WebApplication67.csproj.AssemblyReference.cache
+C:\Users\Minfo\OneDrive\Bureau\ECOM\CRUD-EF\WebApplication67\obj\Debug\net6.0\WebApplication67.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Minfo\OneDrive\Bureau\ECOM\CRUD-EF\WebApplication67\obj\Debug\net6.0\WebApplication67.AssemblyInfoInputs.cache
+C:\Users\Minfo\OneDrive\Bureau\ECOM\CRUD-EF\WebApplication67\obj\Debug\net6.0\WebApplication67.AssemblyInfo.cs
+C:\Users\Minfo\OneDrive\Bureau\ECOM\CRUD-EF\WebApplication67\obj\Debug\net6.0\WebApplication67.csproj.CoreCompileInputs.cache
+C:\Users\Minfo\OneDrive\Bureau\ECOM\CRUD-EF\WebApplication67\obj\Debug\net6.0\WebApplication67.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Minfo\OneDrive\Bureau\ECOM\CRUD-EF\WebApplication67\obj\Debug\net6.0\WebApplication67.RazorAssemblyInfo.cache
+C:\Users\Minfo\OneDrive\Bureau\ECOM\CRUD-EF\WebApplication67\obj\Debug\net6.0\WebApplication67.RazorAssemblyInfo.cs
+C:\Users\Minfo\OneDrive\Bureau\ECOM\CRUD-EF\WebApplication67\obj\Debug\net6.0\WebApplication67.sourcelink.json
+C:\Users\Minfo\OneDrive\Bureau\ECOM\CRUD-EF\WebApplication67\obj\Debug\net6.0\WebApplication67.dll
+C:\Users\Minfo\OneDrive\Bureau\ECOM\CRUD-EF\WebApplication67\obj\Debug\net6.0\refint\WebApplication67.dll
+C:\Users\Minfo\OneDrive\Bureau\ECOM\CRUD-EF\WebApplication67\obj\Debug\net6.0\WebApplication67.pdb

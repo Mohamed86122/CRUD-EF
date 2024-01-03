@@ -19,7 +19,7 @@ namespace WebApplication67.Controllers
         public IActionResult Index()
         {
             return View(_context.Commandes.Include(c => c.Client).ToList());
-            
+
         }
         public IActionResult Create()
         {
@@ -27,7 +27,7 @@ namespace WebApplication67.Controllers
             return View();
         }
 
-        
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create(Commande commande)
